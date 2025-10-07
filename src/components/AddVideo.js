@@ -7,40 +7,41 @@ import Col from 'react-bootstrap/Col';
 
 
 
-function AddVideo({customaddVideos}) {
+function AddVideo({ customaddVideos }) {
 
-  const[video, setVideo]=useState({
+  const [video, setVideo] = useState({
 
-    time:"1 year ago",
-    Channel:'codecreativ solutions',
-    verified:true,
+    time: "2 year ago",
+    Channel: 'codecreativ solutions',
+    verified: true,
 
 
   })
 
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
 
- e.preventDefault()
- customaddVideos(video)
- 
+    e.preventDefault()
+    customaddVideos(video)
+
 
 
   }
 
 
-function handlechange(e){
+  function handlechange(e) {
 
-console.log( e.target.name, e.target.value)
+    console.log(e.target.name, e.target.value)
 
-setVideo({...video,
+    setVideo({
+      ...video,
 
-  [e.target.name]: e.target.value
+      [e.target.name]: e.target.value
 
-})
+    })
 
 
-}
+  }
 
 
 
@@ -48,16 +49,16 @@ setVideo({...video,
 
     <>
       <Container>
-      <Row>
-        <Col>     
-        <Form.Control size="lg" type="text" name='title' onChange={handlechange}  placeholder="title" className='mb-2' />
-        <Form.Control size="lg" type="text" name='views' onChange={handlechange}  placeholder="Views"  className='mb-2'/>
-        <Button variant="danger" className='mb-2' type='submit' onClick={handleSubmit}>Add Video</Button>
-        </Col>
-    </Row>
-  </Container>
- 
-     
+        <Row>
+          <Col>
+            <Form.Control size="lg" type="text" name='title' onChange={handlechange} placeholder="Custom title" className='mb-2' />
+            <Form.Control size="lg" type="text" name='views' onChange={handlechange} placeholder="Custom Views" className='mb-2' />
+            <Button variant="success" className='mb-2' type='submit' onClick={handleSubmit}>Add Many Videos</Button>
+          </Col>
+        </Row>
+      </Container>
+
+
 
 
     </>
