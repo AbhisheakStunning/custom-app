@@ -53,7 +53,7 @@ function AddVideo({ customaddVideos }) {
           <Col>
             <Form.Control size="lg" type="text" name='title' onChange={handlechange} placeholder="Custom title" className='mb-2' />
             <Form.Control size="lg" type="text" name='views' onChange={handlechange} placeholder="Custom Views" className='mb-2' />
-            <Button variant="success" className='mb-2' type='submit' onClick={handleSubmit}>Add Many Videos</Button>
+            <Button variant="success" className='mb-2' type='submit' onClick={handleSubmit}>Add Any Videos</Button>
           </Col>
         </Row>
       </Container>
